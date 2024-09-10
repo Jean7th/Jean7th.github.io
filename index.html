@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jirat Innkaew</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Font (Lato) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Head Section-->
+        <!-- Top of the page (Invisible) -->
+        <div id="top"></div> 
+    </header>
+    <!-- Navigation Area -->
+    <nav>
+        <!-- Menu -->
+        <div id="nav">  
+        <a href="#about-me" class="active">About<i class="material-icons">&#xe7fd;</i></a>
+        <a href="#projects" class="active">Portfolio<i class="material-icons">&#xe873;</i></a>
+        <a href="#contact" class="active">Contact<i class="material-icons">&#xe158;</i></a>
+        </div><br>
+    </nav>
+    <!-- Main Area -->
+    <main>
+        <!-- Top Section -->
+        <div id="head">
+            <div id="index">
+                <h1>Jirat Innkaew</h1>
+            </div>
+            <div id="profile">
+                <img src="images/profile.jpg">
+            </div>
+            <!-- Social Media Icons -->
+            <div id="social">
+                <a href="=#"><img src="icons/facebook.svg"></a>
+                <a href="=#"><img src="icons/twitter.svg"></a>
+                <a href="https://linkedin.com/in/jirat-innkaew"><img src="icons/linken-in.svg"></a>
+                <a href="https://github.com/Jean7th"><img src="icons/github.svg"></a>
+            </div>
+        </div>
+        <!-- About Me Section -->
+        <div id="about-me">
+            <h2>About Me</h2>
+            <!-- Elevator Pitch Table -->
+            <table id="elevator-pitch">
+                <thead>
+                    <tr>
+                        <th colspan="2">Elevator Pitch</th> <!-- Colspan covers the entire table width -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <td>Jirat Innkaew</td>
+                    </tr>
+                    <tr>
+                        <th>e-mail</th>
+                        <td>jiratinnkaew.bootcamp@justit.co.uk</td>
+                    </tr>
+                    <tr>
+                        <th>Role</th>
+                        <td>Software Developer</td>
+                    </tr>
+                    <tr>
+                        <th>Language</th>
+                        <td>English, Thai</td> <!-- Combined languages into one cell for better alignment -->
+                    </tr>
+                    <tr>
+                        <th>Technologies</th> <!-- Changed from SNS to more relevant heading -->
+                        <td>
+                            <img src="icons/html-5.svg" alt="HTML icon">
+                            <img src="icons/css-3.svg" alt="CSS icon">
+                            <img src="icons/mysql.svg" alt="MySQL icon">
+                            <img src="icons/javascript.svg" alt="JavaScript icon">
+                            <img src="icons/python.svg" alt="Python icon">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Projects Section -->
+        <div id="projects">
+            <h2>Projects</h2>
+            <!-- <div class="grid-container">
+                <div class="grid-item" id="project1"></div>
+                <div class="grid-item" id="project2"></div>
+                <div class="grid-item" id="project3"></div>
+                <div class="grid-item" id="project4"></div>
+                <div class="grid-item" id="project5"></div>
+                <div class="grid-item">6</div>
+                <div class="grid-item">7</div>
+                <div class="grid-item">8</div>
+                <div class="grid-item">9</div>
+            </div>  -->
+            <div class="row">
+                <div class="column"> <!-- Content -->
+                    <a href="#">
+                        <div class="container">
+                            <img src="images/calculator.png" class="image">
+                            <div class="overlay">
+                                <div class="text">Basic Web Calculator</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column"> <!-- Content -->
+                    <a href="#">
+                        <div class="container">
+                            <img src="images/weather.png" class="image">
+                            <div class="overlay">
+                                <div class="text">Web Weather Checker</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column"> <!-- Content -->
+                    <a href="#">
+                        <div class="container">
+                            <img src="images/coding.jpg" class="image">
+                            <div class="overlay">
+                                <div class="text">Coming Soon</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Section -->
+        <div id="contact">
+            <h2>Contact Me</h2>
+            <!-- Form -->
+            <div id="form">
+                <form action="https://formspree.io/f/mjkbveeq" method="POST">
+                    <label for="name">Name: </label>
+                        <input type="text" id="name" name="name" required><br><br>
+                    <label for="email">E-mail: </label>
+                        <input type="email" id="email" name="email" required><br><br>
+                    
+                    <!-- Select Options -->
+                    <label for="topics">Topic: </label>
+                    <select name="topics" id="topics">
+                        <option value="topic1">About Me</option>
+                        <option value="topic2">About You</option>
+                        <option value="topic3">About We</option>
+                        <option value="topic4">About They</option>
+                        <option value="topic4">About Who</option>
+                    </select><br><br>
+                    
+                    <!-- Text area -->
+                    <label for="query">Query: </label>
+                        <textarea id="textarea" name="textarea" rows="4" cols="35"></textarea><br><br>
+                    
+                    <!-- File Upload Button -->
+                    <input type="file" id="myFile" name="filename"><br><br>
+                    
+                    <!-- Datalist -->
+                    <label for="platform">Platform: </label>
+                        <input list="platforms" name="platform" id="platform">
+                    <datalist id="platforms">
+                        <option value="Windows">
+                        <option value="MacOS">
+                        <option value="Linux">
+                        <option value="iOS">
+                        <option value="iPadOS">
+                        <option value="Android">
+                    </datalist>
+
+                    <!-- Radio Box -->
+                    <p>Stamp: </p>
+                    <input type="radio" id="unurgent" name="stamp" value="Unurgent">
+                    <label for="unurgent">Unurgent</label><br>
+                    <input type="radio" id="urgent" name="stamp" value="Urgent">
+                    <label for="urgent">Urgent</label><br><br>
+
+                    <!-- Checkbox -->
+                    <input type="checkbox" id="terms" name="terms" value="agree" required>
+                    <lable for="terms"> I agree that I am the person who filled the form.</lable>
+                    <br><br>
+
+                    <!-- Submit button -->
+                    <input type="submit" id="submit" value="Submit">
+                    <br>
+                </form>
+            </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <a href="#top" id="gototop">Click to go to the top.</a><br>
+        <small>&copy; Copyright 2024, Jirat Innkaew</small>
+    </footer>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

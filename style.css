@@ -1,0 +1,254 @@
+/*=========================== Main =========================*/
+* {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: palegreen;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+
+#nav {
+    background: radial-gradient(circle, rgba(75,251,63,1) 0%, rgba(70,252,200,1) 100%);
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    box-shadow: 0 4px 5px -2px gray;
+    /*Flex*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+}
+
+#nav a {
+    color: black;
+    font-style: bold;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+#nav a:hover{
+    color: lightseagreen;
+}
+
+main {
+    width: 80%;
+    margin:auto;
+    padding: 3%;
+    background-color: white;
+    min-height: 100vh;
+    height: auto !important;
+}
+
+#head {
+    display: inline-block;
+}
+
+h1 {
+    font-size: 5rem;
+    transition: color 1s;
+    min-width: 50%;
+}
+
+h1:hover {
+    color: green;
+}
+
+/* Profile Picture */
+#profile img {
+    width: 20%;
+}
+
+/* Social Media Icons */
+#social {
+    display: inline-block;
+}
+
+#social img {
+    height: 30px;
+    width: 30px;
+    transition: transform 250ms;
+}
+
+#social img:hover {
+    height: 30px;
+    width: 30px;
+    transform: translateY(-10px);
+}
+
+h2 {
+    font-size: 2em;
+}
+
+/*=========================== About Me =========================*/
+
+#elevator-pitch {
+    width: 60%; /* Adjust width as needed */
+    margin: 0 auto; /* Centralizes the table */
+    border-collapse: collapse; /* Removes space between borders */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds subtle shadow for depth */
+    background-color: #fff; /* Sets a clean white background */
+    border-radius: 8px; /* Optional: rounds the corners */
+}
+
+#elevator-pitch th, #elevator-pitch td {
+    padding: 12px 20px; /* Adds space inside cells */
+    text-align: left; /* Aligns text to the left */
+    border-bottom: 1px solid #f0f0f0; /* Adds a subtle line between rows */
+}
+
+#elevator-pitch th {
+    background-color: #f9f9f9; /* Light gray background for headers */
+    font-weight: bold; /* Makes header text bold */
+}
+
+#elevator-pitch tr:last-child td {
+    border-bottom: none; /* Removes bottom border from the last row */
+}
+
+/* Enhance the table header */
+#elevator-pitch thead th {
+    text-align: center; /* Centers the text of the table header */
+    padding: 15px; /* Larger padding for the header */
+    background-color: #e0e0e0; /* Slightly darker shade for header */
+}
+
+td img {
+    width: 2em;
+}
+
+td:hover {
+    background-color: aquamarine;
+}
+
+/*=========================== Projects =========================*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 100%;
+    max-width: 100%;
+}
+
+.column img {
+    vertical-align: middle;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: 10vh;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: black;
+}
+
+.container:hover .overlay {
+    opacity: 0.5;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+  /* Tablet Styles */
+@media only screen and (min-width: 481px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+
+  /* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+    .column {
+        flex: 33.3%;
+        max-width: 33.3%;
+    }
+}
+
+/*=========================== Contact =========================*/
+#contact {
+    display:block;
+}
+
+#form {
+    margin: 1em;
+    padding: 1em;
+    border-color: black;
+    border-style: solid;
+    font-family: 'IBM Plex Sans Thai';
+    display: flex;
+    width: 80%;
+}
+
+#submit {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1em;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Footer Area */
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: palegreen;
+    z-index:50000;
+    margin-top: auto;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+#gototop {
+    text-decoration: none;
+
+}
