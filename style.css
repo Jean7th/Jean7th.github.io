@@ -1,12 +1,16 @@
 /*=========================== Main =========================*/
+/* Universal effect */
 * {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
+/* Setting overall body background */
 body {
-    background-color: palegreen;
+    background: linear-gradient(-45deg, #18e9b5, #5fa747, rgb(227, 247, 227), palegreen);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -14,8 +18,23 @@ body {
     place-content: center;
 }
 
+/* Animation for background colours */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/*=========================== Nav Bar =========================*/
+/* Navigation bar appearance */
 #nav {
-    background: radial-gradient(circle, rgba(75,251,63,1) 0%, rgba(70,252,200,1) 100%);
+    background: radial-gradient(ellipse,rgb(55, 200, 45) 0%, rgb(150, 230, 140) 100%);
     width: 100%;
     max-width: 100%;
     padding-bottom: 1em;
@@ -23,6 +42,7 @@ body {
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
     box-shadow: 0 4px 5px -2px gray;
+    z-index: 10000;
     /*Flex*/
     display: flex;
     flex-direction: row;
@@ -32,6 +52,7 @@ body {
     top: 0;
 }
 
+/* Hyper links in the nav bar */
 #nav a {
     color: black;
     font-style: bold;
@@ -39,10 +60,13 @@ body {
     font-size: 1.5em;
 }
 
+/* Hover colour change */
 #nav a:hover{
-    color: lightseagreen;
+    color: white;
 }
 
+/*=========================== Main =========================*/
+/* Main content adjustment */
 main {
     width: 80%;
     margin:auto;
@@ -53,22 +77,111 @@ main {
 }
 
 #head {
-    display: inline-block;
+    display: block;
 }
 
+/* Full Name */
 h1 {
     font-size: 5rem;
     transition: color 1s;
     min-width: 50%;
+    cursor: pointer;
 }
 
+/* Hover effect for full name */
 h1:hover {
     color: green;
 }
 
-/* Profile Picture */
+/* Resume link button */
+#index a:link, a:visited {
+    background-color: palegreen;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    height: 1em;
+    border-radius: 1em;
+}
+
+/* Resume button hover effect */
+#index a:hover {
+    background-color: rgb(21, 255, 0);
+    transition-duration: 2s;
+}
+
+/* Profile Div */
+#profile {
+    display: flex;
+    justify-content: center;
+}
+
+/* Speech Bubble */
+.speech-bubble {
+	position: relative;
+	background: #ffffff;
+	border-radius: .4em;
+    border-style: solid;
+    padding: 20px;
+    margin: 5%;
+    height: 20vh;
+    width: 10em;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 0.625em solid transparent;
+	border-left-color: #000000;
+	border-right: 0;
+	border-top: 0;
+	margin-top: -0.312em;
+	margin-right: -0.625em;
+}
+
+/* Profile image */
 #profile img {
+    position: relative;
     width: 20%;
+    border-radius: 50%;
+    border: 5px solid black;
+    cursor: pointer;
+}
+
+#profile img:hover {
+    transition-duration: 3s;
+    zoom: 0.5;
+}
+
+#profile img:active {
+    animation: Shake 0.5s linear infinite;
+}
+
+/*Using keyframes for shaking an image*/
+@keyframes Shake {
+    0% {
+        transform: rotate(5deg);
+    }
+
+    25% {
+        transform: rotate(-6deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-6deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
 }
 
 /* Social Media Icons */
@@ -82,25 +195,29 @@ h1:hover {
     transition: transform 250ms;
 }
 
+/* Zoom in hover effect */
 #social img:hover {
     height: 30px;
     width: 30px;
     transform: translateY(-10px);
 }
 
+/* Category text appearance */
 h2 {
     font-size: 2em;
+    cursor: default;
 }
 
 /*=========================== About Me =========================*/
 
 #elevator-pitch {
-    width: 60%; /* Adjust width as needed */
+    width: 40%; /* Adjust width as needed */
     margin: 0 auto; /* Centralizes the table */
     border-collapse: collapse; /* Removes space between borders */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds subtle shadow for depth */
     background-color: #fff; /* Sets a clean white background */
     border-radius: 8px; /* Optional: rounds the corners */
+    cursor: default;
 }
 
 #elevator-pitch th, #elevator-pitch td {
@@ -125,43 +242,53 @@ h2 {
     background-color: #e0e0e0; /* Slightly darker shade for header */
 }
 
+td a {
+    text-decoration: none; /* Remove underline from a hyperlink */
+}
+
 td img {
-    width: 2em;
+    width: 2em; /* Set vector images width */
 }
 
 td:hover {
-    background-color: aquamarine;
+    background-color: aquamarine; /* Hover color effect */
 }
 
 /*=========================== Projects =========================*/
-
+/* Display content in row */
 .row {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
 }
 
+/* Each content is count as a column */
 .column {
     flex: 100%;
     max-width: 100%;
 }
 
+/* Set the image visibility */
 .column img {
     vertical-align: middle;
     height: 15rem;
     object-fit: cover;
 }
 
+/* Holding Tooltip and overlay */
 .container {
     position: relative;
     width: 100%;
 }
 
+/* Image Display size */
 .image {
     display: block;
     width: 100%;
     height: 10vh;
 }
+
+/* Overlay */
 .overlay {
     position: absolute;
     top: 0;
@@ -175,10 +302,12 @@ td:hover {
     background-color: black;
 }
 
+/* Hover effect */
 .container:hover .overlay {
     opacity: 0.5;
 }
 
+/* Text appearance */
 .text {
     color: white;
     font-size: 20px;
@@ -198,7 +327,6 @@ td:hover {
     }
 }
 
-
   /* Desktop Styles */
 @media only screen and (min-width: 1024px) {
     .column {
@@ -207,21 +335,44 @@ td:hover {
     }
 }
 
-/*=========================== Contact =========================*/
-#contact {
-    display:block;
+/* Tooltips */
+.container .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
 }
 
+/* Tooltip Hover effect */
+.container:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*=========================== Contact =========================*/
+#contact {
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Elements to build a form */
 #form {
     margin: 1em;
     padding: 1em;
     border-color: black;
     border-style: solid;
     font-family: 'IBM Plex Sans Thai';
-    display: flex;
-    width: 80%;
+    display: block;
 }
 
+/* Submit button */
 #submit {
     background-color: green;
     color: white;
@@ -230,9 +381,10 @@ td:hover {
     font-size: 1em;
     display: flex;
     align-items: flex-end;
+    cursor: pointer;
 }
 
-/* Footer Area */
+/*=========================== Footer Area =========================*/
 footer {
     text-align: center;
     position: fixed;
@@ -250,5 +402,4 @@ footer a {
 
 #gototop {
     text-decoration: none;
-
 }

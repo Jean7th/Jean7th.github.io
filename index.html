@@ -16,10 +16,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
     <header>
         <!-- Head Section-->
-        <!-- Top of the page (Invisible) -->
-        <div id="top"></div> 
+        <div id="top"></div> <!-- Top of the page (Invisible) -->
     </header>
     <!-- Navigation Area -->
     <nav>
@@ -35,21 +37,30 @@
         <!-- Top Section -->
         <div id="head">
             <div id="index">
-                <h1>Jirat Innkaew</h1>
+                <h1 id="full-name">Jirat Innkaew</h1>
+                <a href="https://drive.google.com/file/d/1MIZTQAI_jEVtf3oPusPdQ5RBuHBFJ66Q/view?usp=sharing">My Resume</a> <!-- Hyperlink to Google Drive-->
             </div>
+            <br>
             <div id="profile">
+                <div class="speech-bubble">
+                    <p>As a dedicated Computer Science graduate, I'm passionate about leveraging my technical skills to contribute meaningfully to the IT industry.</p>
+                </div>
                 <img src="images/profile.jpg">
             </div>
             <!-- Social Media Icons -->
             <div id="social">
-                <a href="=#"><img src="icons/facebook.svg"></a>
-                <a href="=#"><img src="icons/twitter.svg"></a>
+                <!-- <a href="=#"><img src="icons/facebook.svg"></a>
+                <a href="=#"><img src="icons/twitter.svg"></a> -->
                 <a href="https://linkedin.com/in/jirat-innkaew"><img src="icons/linken-in.svg"></a>
                 <a href="https://github.com/Jean7th"><img src="icons/github.svg"></a>
             </div>
         </div>
+        <br>
         <!-- About Me Section -->
         <div id="about-me">
+            <br>
+            <br>
+            <br>
             <h2>About Me</h2>
             <!-- Elevator Pitch Table -->
             <table id="elevator-pitch">
@@ -65,7 +76,7 @@
                     </tr>
                     <tr>
                         <th>e-mail</th>
-                        <td>jiratinnkaew.bootcamp@justit.co.uk</td>
+                        <td><a href="mailto: jirat7439@hotmail.com">jirat7439@hotmail.com</a></td>
                     </tr>
                     <tr>
                         <th>Role</th>
@@ -88,37 +99,43 @@
                 </tbody>
             </table>
         </div>
+        <br>
         <!-- Projects Section -->
         <div id="projects">
+            <br>
+            <br>
+            <br>
             <h2>Projects</h2>
-            <!-- <div class="grid-container">
-                <div class="grid-item" id="project1"></div>
-                <div class="grid-item" id="project2"></div>
-                <div class="grid-item" id="project3"></div>
-                <div class="grid-item" id="project4"></div>
-                <div class="grid-item" id="project5"></div>
-                <div class="grid-item">6</div>
-                <div class="grid-item">7</div>
-                <div class="grid-item">8</div>
-                <div class="grid-item">9</div>
-            </div>  -->
             <div class="row">
                 <div class="column"> <!-- Content -->
-                    <a href="#">
+                    <a href="https://jean7th.github.io/Calculator/">
                         <div class="container">
+                            <span class="tooltiptext">Web Application</span>
                             <img src="images/calculator.png" class="image">
                             <div class="overlay">
-                                <div class="text">Basic Web Calculator</div>
+                                <div class="text">Basic Calculator<br>HTML/CSS/JavaScript</div>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="column"> <!-- Content -->
-                    <a href="#">
+                    <a href="https://jean7th.github.io/Weather/">
                         <div class="container">
+                            <span class="tooltiptext">Web Application</span>
                             <img src="images/weather.png" class="image">
                             <div class="overlay">
-                                <div class="text">Web Weather Checker</div>
+                                <div class="text">Weather Checker<br>HTML/CSS/JavaScript</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column"> <!-- Content -->
+                    <a href="https://jean7th.github.io/RandomDadJokes/">
+                        <div class="container">
+                            <span class="tooltiptext">Web Application</span>
+                            <img src="images/dadjokes.png" class="image">
+                            <div class="overlay">
+                                <div class="text">Random Dad Jokes<br>HTML/CSS/JavaScript</div>
                             </div>
                         </div>
                     </a>
@@ -126,6 +143,7 @@
                 <div class="column"> <!-- Content -->
                     <a href="#">
                         <div class="container">
+                            <span class="tooltiptext">Upcoming Project</span>
                             <img src="images/coding.jpg" class="image">
                             <div class="overlay">
                                 <div class="text">Coming Soon</div>
@@ -135,9 +153,13 @@
                 </div>
             </div>
         </div>
+        <br>
         <!-- Contact Section -->
+        <h2>Contact Me</h2>
         <div id="contact">
-            <h2>Contact Me</h2>
+            <br>
+            <br>
+            <br>
             <!-- Form -->
             <div id="form">
                 <form action="https://formspree.io/f/mjkbveeq" method="POST">
@@ -149,11 +171,9 @@
                     <!-- Select Options -->
                     <label for="topics">Topic: </label>
                     <select name="topics" id="topics">
-                        <option value="topic1">About Me</option>
-                        <option value="topic2">About You</option>
-                        <option value="topic3">About We</option>
-                        <option value="topic4">About They</option>
-                        <option value="topic4">About Who</option>
+                        <option value="topic1">Employment</option>
+                        <option value="topic2">Information</option>
+                        <option value="topic3">Others</option>
                     </select><br><br>
                     
                     <!-- Text area -->
@@ -163,7 +183,7 @@
                     <!-- File Upload Button -->
                     <input type="file" id="myFile" name="filename"><br><br>
                     
-                    <!-- Datalist -->
+                    <!-- Datalist
                     <label for="platform">Platform: </label>
                         <input list="platforms" name="platform" id="platform">
                     <datalist id="platforms">
@@ -173,7 +193,7 @@
                         <option value="iOS">
                         <option value="iPadOS">
                         <option value="Android">
-                    </datalist>
+                    </datalist> -->
 
                     <!-- Radio Box -->
                     <p>Stamp: </p>
@@ -181,12 +201,12 @@
                     <label for="unurgent">Unurgent</label><br>
                     <input type="radio" id="urgent" name="stamp" value="Urgent">
                     <label for="urgent">Urgent</label><br><br>
-
-                    <!-- Checkbox -->
+                    
+                    <!-- Checkbox
                     <input type="checkbox" id="terms" name="terms" value="agree" required>
-                    <lable for="terms"> I agree that I am the person who filled the form.</lable>
-                    <br><br>
+                    <lable for="terms"> I agree that I am the person who filled the form.</lable> -->
 
+                    <br>
                     <!-- Submit button -->
                     <input type="submit" id="submit" value="Submit">
                     <br>
